@@ -1,1 +1,20 @@
-<p>imagen works!</p>
+<h1>Guardar Calificaion</h1>
+
+<p>
+    Seleccione una imagen de la calificacion para guardarla como registro: <br>
+</p>
+<table align="center">
+    <tr>
+        <div *ngIf="!cargarImagen; else sihay" >
+            <img src="https://incubaweb.com/wp-content/uploads/2016/09/upload.png" 
+            alt="Inserte Imagen" height="100" width="100">
+                <p><br>Suba Imagen</p>
+        </div>
+        <ng-template #sihay><img src="{{imagenN[0]}}" alt="Subiendo Image..." height="400" width="300"><br>Subiendo Calificacion . . .<br>Espere un momento...</ng-template>
+    </tr>
+    <tr>
+        <input type="file" name="Subir Imagen" id=""
+                accept=".png, .jpg"
+                (change)="cargar($event)">
+    </tr>
+</table>

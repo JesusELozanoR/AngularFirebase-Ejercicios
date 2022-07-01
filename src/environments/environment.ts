@@ -11,7 +11,7 @@ export const environment = {
     storageBucket: "angular-ejercicios-da683.appspot.com",
     messagingSenderId: "621675488633",
     appId: "1:621675488633:web:3ab3ab8526ae1efd3a3ba8",
-    measurementId: "G-BZ4WQ80H2X"
+    measurementId: "G-BZ4WQ80H2X"  
   }
 };
 
