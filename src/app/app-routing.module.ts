@@ -9,6 +9,9 @@ const routes: Routes = [
     path: 'ejercicio',
     loadChildren: () => import('./ejercicio/ejercicio.module').then( m => m.EjercicioModule ) ,
   },{
+    path: 'crud',
+    loadChildren: () => import('./crud/crud.module').then( m => m.CrudModule ) ,
+  },{
     path: '**',
     redirectTo: 'usuario'
   },

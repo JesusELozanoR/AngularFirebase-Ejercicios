@@ -18,13 +18,6 @@ export class RegistroComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.database.obtenerTodos("users").subscribe((usuariosRef) => {
-      this.usuarios = usuariosRef.map(userRef => {
-        let usuario: any = userRef.payload.doc.data();
-        usuario['id'] = userRef.payload.doc.id;
-        return usuario;
-      });
-    })
   }
 
   constructor(private authService: AuthService, private database: DataBaseService, private router: Router) { }

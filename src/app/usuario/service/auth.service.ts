@@ -23,7 +23,7 @@ export class AuthService {
     try {
       return await this.afauth.signInWithEmailAndPassword(email, password);
     } catch (err) {
-      console.log("error en login: ", err);
+      console.log("error en login: ");
       return null;
     }
   }

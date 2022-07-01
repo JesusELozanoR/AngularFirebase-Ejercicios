@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-listado',
-  templateUrl: './listado.component.html',
+  selector: 'app-eliminar',
+  templateUrl: './eliminar.component.html',
   styles: [
   ]
 })
-export class ListadoComponent implements OnInit {
+export class EliminarComponent implements OnInit {
 
   constructor() { }
 

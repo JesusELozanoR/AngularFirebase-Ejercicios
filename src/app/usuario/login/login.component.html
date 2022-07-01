@@ -10,7 +10,10 @@
         name="correo"
         [(ngModel)]="usuario.email"/>
 
-        
+        <div *ngIf="!validaremial">
+                <p>Email no Valido</p>
+        </div>
+
         <br>
         <br>
 
@@ -20,9 +23,9 @@
         placeholder="contrasena"
         [(ngModel)]="usuario.password"/>
 
-
         <br><br>
-        <button (click)="Ingresar()">Ingresar Datos</button>
+            <button type="reset" (click)="Ingresar()" >Ingresar Datos</button>
+
     </form>
 </div>
 <br>

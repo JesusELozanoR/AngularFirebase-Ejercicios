@@ -16,22 +16,26 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
  
   }
+  validaremial:boolean=true;
 
   constructor(private authService: AuthService, private router: Router) { }
-
+  numero: Number= 0;
   Ingresar() {
     const { email, password } = this.usuario;
+
+    this.numero=email.length;
+    if(!((this.numero>5)&&(email.includes('@'))&&(email.includes('.com'))))
+    { this.validaremial=false;
+      return}
+
     this.authService.login(email, password).then(user => {
-      console.log("Bienvenido ", user);
       if(!user) {
-        alert("Datos incorrectos");
+        console.log('UwU')
         return;
-      };
-      alert("Datos Correctos, Iniciando Sesion");
-      this.router.navigate(['/usuario/listado'])
-    }).catch(err=>{
-      console.log(err)
-    })
+      }else{alert("Datos Correctos, Iniciando Sesion");
+      console.log("Bienvenido ", user);
+      this.router.navigate(['/usuario/listado'])}
+      })
   }
 
 

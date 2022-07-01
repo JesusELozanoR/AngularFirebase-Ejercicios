@@ -19,20 +19,4 @@ export class DataBaseService {
     return this.firestore.collection(coleccion).doc(id).snapshotChanges();
   }
 
-  public obtenerTodos(coleccion: string) {
-    return this.firestore.collection(coleccion).snapshotChanges();
-  }
-
-  public actualizar(coleccion: string, data: any, id: string) {
-    return this.firestore.collection(coleccion).doc(id).set(data);
-  }
-
-  public eliminar(collection: string, id: string) {
-    return this.firestore.collection(collection).doc(id).delete();
-  }
-
-  public createWithCustomId(collection: string, customId: string, data: any) {
-    this.firestore.collection(collection).doc(customId).set(data);
-  }
-
 }
