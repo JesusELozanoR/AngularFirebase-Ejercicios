@@ -5,7 +5,11 @@ import { UploadService } from '../services/upload.service';
   selector: 'app-imagen',
   templateUrl: './imagen.component.html',
   styles: [`
-  
+  td {
+  height: 50px;
+  vertical-align: center;
+  text-align: center;
+}
   `
   ]
 })
