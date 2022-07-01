@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { SharedeModule } from './shared/shared.module';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from '../environments/environment';
+import { CrudModule } from './crud/crud.module';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 @NgModule({
   declarations: [
@@ -17,9 +19,10 @@ import { environment } from '../environments/environment';
     AppRoutingModule,
     FormsModule,
     SharedeModule,
+    CrudModule,
     AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
-  providers: [],
+  providers: [ AngularFireModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

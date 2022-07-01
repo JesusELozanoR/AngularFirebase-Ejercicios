@@ -1,0 +1,37 @@
+<h1>Editar Alumno: {{alumnoN.nombre}}</h1>
+<h2>Boleta: {{alumnoN.boleta}}</h2><br>
+
+<form action="">
+    <h4>Nombre:</h4>
+    <input type="text"
+    placeholder="{{alumnoN.nombre}}"
+    name="nombre"
+    required
+    value="UwU"
+    autocomplete="off"
+    [(ngModel)]="alumno.nombre"/>
+
+    <h4>Calificacion:</h4>
+    <input type="number"
+    placeholder="{{alumnoN.cal}}"
+    name="cal"
+    required
+    [(ngModel)]="alumno.cal"
+    autocomplete="off"
+    width="100%"/>
+
+    <!-- <h4>Boleta:</h4>
+    <input type="text"
+    name="boleta" 
+    [placeholder]="alumnoN.boleta"
+    required
+    autocomplete="off"
+    [(ngModel)]="alumno.boleta"/> -->
+
+    <br><br>
+    <button (click)="editar()" type="reset">Guardar Datos</button>
+</form>
+<br>
+
+
+<button (click)="regresar()">Regresar</button>
