@@ -1,4 +1,32 @@
 <h1>Agregar Alumno</h1>
 
+<form action="" autocomplete="off">
+    <h4>Nombre:</h4>
+    <input type="text"
+    placeholder="Nombre del Alumno"
+    name="nombre"
+    required
+    [(ngModel)]="alumno.nombre"/>
+
+
+    <h4>Calificacion:</h4>
+    <input type="number"
+    placeholder="calificion"
+    name="cal"
+    required
+    [(ngModel)]="alumno.cal"
+    width="100%"/>
+
+    <h4>Boleta:</h4>
+    <input type="text"
+    name="boleta" 
+    placeholder="Boleta"
+    [(ngModel)]="alumno.boleta"/>
+
+    <br><br>
+    <button (click)="guardar()" type="reset">Ingresar Datos</button>
+</form>
+<br>
+
 
 <button (click)="regresar()">Regresar</button>

@@ -2,8 +2,33 @@
 
 <button (click)="agregarAlumno()">Agregar Alumno</button>
 
+<table border="2px solid">
+    <tr>
+        <th><b>Boleta</b></th>
+        <th><b>Nombre</b></th>
+        <th><b>Calificaion</b></th>
+        <th colspan="3"><b>Acciones</b></th>
+    </tr>
 
-            <button (click)="editarAlumno()">Editar Alumno</button>
+
+    <tr *ngFor="let item of alumnos$ | async">
+        <td>{{item.boleta}}</td>
+        <td>{{item.nombre}}</td>
+        <td>{{item.cal}}</td>
+        <td>
+            <button (click)="editarAlumno(item)">Editar Alumno</button>
+        </td>
+        <td>
+            <button (click)="eliminarAlumno(item)">Dar de Baja</button>
+        </td>
+        
+    </tr>
+
+</table>
+
+
+
+
 
 
 
